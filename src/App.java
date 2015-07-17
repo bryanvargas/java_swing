@@ -3,8 +3,13 @@ import javax.swing.*;
 public class App {
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("Hello World");
 
-        frame.setVisible(true);
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+              new Mainframe();
+            }
+        });
+
+
     }
 }
